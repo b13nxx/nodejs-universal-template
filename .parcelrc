@@ -4,9 +4,6 @@
     "blob-url:*": [
       "...",
       "@parcel/transformer-inline"
-    ],
-    "*.xml": [
-      "@parcel/transformer-raw"
     ]
   },
   "optimizers": {
