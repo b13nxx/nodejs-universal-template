@@ -74,9 +74,7 @@ import startCase from 'lodash/startCase.js'
 import toLower from 'lodash/toLower.js'
 ```
 
-```
-instead of
-```
+instead of:
 
 ```typescript
 import { startCase, toLower } from 'lodash'
