@@ -1,0 +1,55 @@
+{
+  "name": "nodejs-universal-template",
+  "description": "",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "source": "./src/app.ts",
+  "main": "./build/node/app.cjs",
+  "module": "./build/node/app.mjs",
+  "web": "./build/web/app.js",
+  "targets": {
+    "web": {
+      "context": "browser",
+      "outputFormat": "global"
+    }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead, maintained node versions",
+  "@parcel/resolver-default": {
+    "packageExports": true
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "beforecommit": "lint-staged --concurrent false && rimraf tsconfig.lint.json",
+    "beforecommitmsg": "commitlint --edit",
+    "commit": "commit",
+    "dev": "parcel watch --log-level verbose",
+    "build": "rimraf build && parcel build --no-source-maps --log-level verbose",
+    "start": "node ./build/node/app.cjs"
+  },
+  "dependencies": {
+    "jest": "^29.6.4",
+    "lodash": "^4.17.21",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/prompt-cli": "^17.7.1",
+    "@types/lodash": "^4.14.199",
+    "@types/node": "^20.5.9",
+    "esbuild": "^0.19.2",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "parcel": "^2.9.3",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.1",
+    "ts-standard": "^12.0.2",
+    "ts-toolbelt": "^9.6.0",
+    "typescript": "^5.2.2"
+  }
+}

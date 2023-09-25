@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "ms-vsliveshare.vsliveshare",
+    "eamodio.gitlens",
+    "dbaeumer.vscode-eslint",
+    "rohit-gohri.format-code-action",
+    "better-ts-errors.better-ts-errors",
+    "github.vscode-pull-request-github"
+  ]
+}
